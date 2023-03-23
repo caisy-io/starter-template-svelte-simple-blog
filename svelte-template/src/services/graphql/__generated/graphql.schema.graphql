@@ -1,0 +1,1975 @@
+""""""
+type Asset {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  author: String
+
+  """"""
+  copyright: String
+
+  """"""
+  description: String
+
+  """"""
+  dominantColor: String
+
+  """"""
+  id: ID
+
+  """"""
+  keywords: String
+
+  """"""
+  originType: String
+
+  """"""
+  originalName: String
+
+  """"""
+  src: String
+
+  """"""
+  title: String
+}
+
+""""""
+type Asset_Connection {
+  """"""
+  edges: [Asset_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type Asset_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: Asset
+}
+
+""""""
+input Asset_CreateInput {
+  """"""
+  author: String
+
+  """"""
+  copyright: String
+
+  """"""
+  description: String
+
+  """"""
+  dominantColor: String
+
+  """"""
+  keywords: String
+
+  """"""
+  originType: String
+
+  """"""
+  originalName: String
+
+  """"""
+  src: String
+
+  """"""
+  title: String
+}
+
+""""""
+input Asset_Sort {
+  """"""
+  author: Order
+
+  """"""
+  copyright: Order
+
+  """"""
+  description: Order
+
+  """"""
+  dominantColor: Order
+
+  """"""
+  keywords: Order
+
+  """"""
+  originType: Order
+
+  """"""
+  originalName: Order
+
+  """"""
+  title: Order
+}
+
+""""""
+input Asset_UpdateInput {
+  """"""
+  author: String
+
+  """"""
+  copyright: String
+
+  """"""
+  description: String
+
+  """"""
+  dominantColor: String
+
+  """"""
+  keywords: String
+
+  """"""
+  originType: String
+
+  """"""
+  originalName: String
+
+  """"""
+  src: String
+
+  """"""
+  title: String
+}
+
+""""""
+input Asset_Where {
+  """"""
+  AND: [Asset_Where]
+
+  """"""
+  OR: [Asset_Where]
+
+  """"""
+  author: CaisyField_String_Where
+
+  """"""
+  copyright: CaisyField_String_Where
+
+  """"""
+  description: CaisyField_String_Where
+
+  """"""
+  dominantColor: CaisyField_Color_Where
+
+  """"""
+  keywords: CaisyField_String_Where
+
+  """"""
+  originType: CaisyField_String_Where
+
+  """"""
+  originalName: CaisyField_String_Where
+
+  """"""
+  title: CaisyField_String_Where
+}
+
+""""""
+type Author {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  avatar(locale: String): Asset
+
+  """"""
+  id: ID
+
+  """"""
+  name: String
+
+  """"""
+  role: String
+}
+
+""""""
+type Author_Connection {
+  """"""
+  edges: [Author_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type Author_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: Author
+}
+
+""""""
+input Author_CreateInput {
+  """"""
+  avatar: ID
+
+  """"""
+  name: String
+
+  """"""
+  role: String
+}
+
+""""""
+input Author_Sort {
+  """"""
+  avatar: Order
+
+  """"""
+  name: Order
+
+  """"""
+  role: Order
+}
+
+""""""
+input Author_UpdateInput {
+  """"""
+  avatar: ID
+
+  """"""
+  name: String
+
+  """"""
+  role: String
+}
+
+""""""
+input Author_Where {
+  """"""
+  AND: [Author_Where]
+
+  """"""
+  OR: [Author_Where]
+
+  """"""
+  name: CaisyField_String_Where
+
+  """"""
+  role: CaisyField_String_Where
+}
+
+""""""
+type BlogArticle {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  author(locale: String): Author
+
+  """"""
+  category(locale: String): Category
+
+  """"""
+  id: ID
+
+  """"""
+  seo(locale: String): SeoInformation
+
+  """"""
+  slug: String
+
+  """"""
+  teaserDesciption: String
+
+  """"""
+  teaserHeadline: String
+
+  """"""
+  teaserImage(locale: String): Asset
+
+  """"""
+  text(locale: String): BlogArticle_text
+}
+
+""""""
+type BlogArticleGrid {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  articles(locale: String): [BlogArticleGrid_articles]
+
+  """"""
+  headline: String
+
+  """"""
+  id: ID
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type BlogArticleGrid_Connection {
+  """"""
+  edges: [BlogArticleGrid_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type BlogArticleGrid_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: BlogArticleGrid
+}
+
+""""""
+input BlogArticleGrid_CreateInput {
+  """"""
+  articles: [ID]
+
+  """"""
+  headline: String
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input BlogArticleGrid_Sort {
+  """"""
+  articles: Order
+
+  """"""
+  headline: Order
+
+  """"""
+  subheadline: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input BlogArticleGrid_UpdateInput {
+  """"""
+  articles: [ID]
+
+  """"""
+  headline: String
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input BlogArticleGrid_Where {
+  """"""
+  AND: [BlogArticleGrid_Where]
+
+  """"""
+  OR: [BlogArticleGrid_Where]
+
+  """"""
+  headline: CaisyField_String_Where
+
+  """"""
+  subheadline: CaisyField_String_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+""""""
+union BlogArticleGrid_articles = BlogArticle
+
+""""""
+type BlogArticle_Connection {
+  """"""
+  edges: [BlogArticle_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type BlogArticle_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: BlogArticle
+}
+
+""""""
+input BlogArticle_CreateInput {
+  """"""
+  author: ID
+
+  """"""
+  category: ID
+
+  """"""
+  seo: ID
+
+  """"""
+  slug: String
+
+  """"""
+  teaserDesciption: String
+
+  """"""
+  teaserHeadline: String
+
+  """"""
+  teaserImage: ID
+
+  """"""
+  text: JSON
+}
+
+""""""
+input BlogArticle_Sort {
+  """"""
+  author: Order
+
+  """"""
+  category: Order
+
+  """"""
+  seo: Order
+
+  """"""
+  slug: Order
+
+  """"""
+  teaserDesciption: Order
+
+  """"""
+  teaserHeadline: Order
+
+  """"""
+  teaserImage: Order
+}
+
+""""""
+input BlogArticle_UpdateInput {
+  """"""
+  author: ID
+
+  """"""
+  category: ID
+
+  """"""
+  seo: ID
+
+  """"""
+  slug: String
+
+  """"""
+  teaserDesciption: String
+
+  """"""
+  teaserHeadline: String
+
+  """"""
+  teaserImage: ID
+
+  """"""
+  text: JSON
+}
+
+""""""
+input BlogArticle_Where {
+  """"""
+  AND: [BlogArticle_Where]
+
+  """"""
+  OR: [BlogArticle_Where]
+
+  """"""
+  slug: CaisyField_String_Where
+
+  """"""
+  teaserDesciption: CaisyField_String_Where
+
+  """"""
+  teaserHeadline: CaisyField_String_Where
+
+  """"""
+  text: CaisyField_Richtext_Where
+}
+
+""""""
+type BlogArticle_text {
+  """"""
+  connections: [BlogArticle_text_Connections]
+
+  """"""
+  json: JSON
+}
+
+""""""
+union BlogArticle_text_Connections = Asset
+
+""""""
+type CaisyDocument_Meta {
+  """"""
+  createdAt: DateTime
+
+  """"""
+  id: ID
+
+  """"""
+  locale: String
+
+  """"""
+  locales: [String]
+
+  """"""
+  publishedAt: DateTime
+
+  """"""
+  updatedAt: DateTime
+}
+
+""""""
+input CaisyField_Color_Where {
+  """"""
+  contains: String
+
+  """"""
+  eq: String
+
+  """"""
+  neq: String
+}
+
+""""""
+input CaisyField_Richtext_Where {
+  """"""
+  contains: String
+
+  """"""
+  eq: String
+
+  """"""
+  neq: String
+}
+
+""""""
+input CaisyField_String_Where {
+  """"""
+  contains: String
+
+  """"""
+  eq: String
+
+  """"""
+  neq: String
+}
+
+""""""
+type Caisy_Field_Document_NotFound {
+  """"""
+  id: ID
+
+  """"""
+  message: String
+}
+
+""""""
+type Category {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  id: ID
+
+  """"""
+  name: String
+}
+
+""""""
+type Category_Connection {
+  """"""
+  edges: [Category_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type Category_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: Category
+}
+
+""""""
+input Category_CreateInput {
+  """"""
+  name: String
+}
+
+""""""
+input Category_Sort {
+  """"""
+  name: Order
+}
+
+""""""
+input Category_UpdateInput {
+  """"""
+  name: String
+}
+
+""""""
+input Category_Where {
+  """"""
+  AND: [Category_Where]
+
+  """"""
+  OR: [Category_Where]
+
+  """"""
+  name: CaisyField_String_Where
+}
+
+""""""
+type ContactForm {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  headline: String
+
+  """"""
+  id: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type ContactForm_Connection {
+  """"""
+  edges: [ContactForm_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type ContactForm_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: ContactForm
+}
+
+""""""
+input ContactForm_CreateInput {
+  """"""
+  headline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input ContactForm_Sort {
+  """"""
+  headline: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input ContactForm_UpdateInput {
+  """"""
+  headline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input ContactForm_Where {
+  """"""
+  AND: [ContactForm_Where]
+
+  """"""
+  OR: [ContactForm_Where]
+
+  """"""
+  headline: CaisyField_String_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+"""
+The `DateTime` scalar type represents a DateTime. The DateTime is serialized as an RFC 3339 quoted string
+"""
+scalar DateTime
+
+""""""
+type Footer {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  content(locale: String): Footer_content
+
+  """"""
+  id: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Footer_CreateInput {
+  """"""
+  content: JSON
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Footer_UpdateInput {
+  """"""
+  content: JSON
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type Footer_content {
+  """"""
+  connections: [Footer_content_Connections]
+
+  """"""
+  json: JSON
+}
+
+""""""
+union Footer_content_Connections = Caisy_Field_Document_NotFound
+
+""""""
+type Fulltext {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  id: ID
+
+  """"""
+  text(locale: String): Fulltext_text
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type Fulltext_Connection {
+  """"""
+  edges: [Fulltext_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type Fulltext_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: Fulltext
+}
+
+""""""
+input Fulltext_CreateInput {
+  """"""
+  text: JSON
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Fulltext_Sort {
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input Fulltext_UpdateInput {
+  """"""
+  text: JSON
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Fulltext_Where {
+  """"""
+  AND: [Fulltext_Where]
+
+  """"""
+  OR: [Fulltext_Where]
+
+  """"""
+  text: CaisyField_Richtext_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+""""""
+type Fulltext_text {
+  """"""
+  connections: [Fulltext_text_Connections]
+
+  """"""
+  json: JSON
+}
+
+""""""
+union Fulltext_text_Connections = Asset
+
+""""""
+type FullwidthBlogTeaser {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  featuredArticle(locale: String): BlogArticle
+
+  """"""
+  id: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type FullwidthBlogTeaser_Connection {
+  """"""
+  edges: [FullwidthBlogTeaser_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type FullwidthBlogTeaser_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: FullwidthBlogTeaser
+}
+
+""""""
+input FullwidthBlogTeaser_CreateInput {
+  """"""
+  featuredArticle: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input FullwidthBlogTeaser_Sort {
+  """"""
+  featuredArticle: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input FullwidthBlogTeaser_UpdateInput {
+  """"""
+  featuredArticle: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input FullwidthBlogTeaser_Where {
+  """"""
+  AND: [FullwidthBlogTeaser_Where]
+
+  """"""
+  OR: [FullwidthBlogTeaser_Where]
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+""""""
+type Headline {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  headline: String
+
+  """"""
+  id: ID
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type Headline_Connection {
+  """"""
+  edges: [Headline_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type Headline_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: Headline
+}
+
+""""""
+input Headline_CreateInput {
+  """"""
+  headline: String
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Headline_Sort {
+  """"""
+  headline: Order
+
+  """"""
+  subheadline: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input Headline_UpdateInput {
+  """"""
+  headline: String
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Headline_Where {
+  """"""
+  AND: [Headline_Where]
+
+  """"""
+  OR: [Headline_Where]
+
+  """"""
+  headline: CaisyField_String_Where
+
+  """"""
+  subheadline: CaisyField_String_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+"""Any JSON value"""
+scalar JSON
+
+""""""
+type Mutation {
+  """"""
+  createAsset(input: Asset_CreateInput!, locale: String): Asset
+
+  """"""
+  createAuthor(input: Author_CreateInput!, locale: String): Author
+
+  """"""
+  createBlogArticle(input: BlogArticle_CreateInput!, locale: String): BlogArticle
+
+  """"""
+  createBlogArticleGrid(input: BlogArticleGrid_CreateInput!, locale: String): BlogArticleGrid
+
+  """"""
+  createCategory(input: Category_CreateInput!, locale: String): Category
+
+  """"""
+  createContactForm(input: ContactForm_CreateInput!, locale: String): ContactForm
+
+  """"""
+  createFooter(input: Footer_CreateInput!, locale: String): Footer
+
+  """"""
+  createFulltext(input: Fulltext_CreateInput!, locale: String): Fulltext
+
+  """"""
+  createFullwidthBlogTeaser(input: FullwidthBlogTeaser_CreateInput!, locale: String): FullwidthBlogTeaser
+
+  """"""
+  createHeadline(input: Headline_CreateInput!, locale: String): Headline
+
+  """"""
+  createNavigation(input: Navigation_CreateInput!, locale: String): Navigation
+
+  """"""
+  createNavigationEntry(input: NavigationEntry_CreateInput!, locale: String): NavigationEntry
+
+  """"""
+  createNewsletterSignup(input: NewsletterSignup_CreateInput!, locale: String): NewsletterSignup
+
+  """"""
+  createPage(input: Page_CreateInput!, locale: String): Page
+
+  """"""
+  createSeoInformation(input: SeoInformation_CreateInput!, locale: String): SeoInformation
+
+  """"""
+  deleteAsset(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteAuthor(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteBlogArticle(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteBlogArticleGrid(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteCategory(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteContactForm(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteFooter(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteFulltext(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteFullwidthBlogTeaser(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteHeadline(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteNavigation(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteNavigationEntry(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteNewsletterSignup(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deletePage(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  deleteSeoInformation(
+    """DocumentID"""
+    id: ID!
+  ): Boolean
+
+  """"""
+  updateAsset(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Asset_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Asset
+
+  """"""
+  updateAuthor(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Author_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Author
+
+  """"""
+  updateBlogArticle(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: BlogArticle_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): BlogArticle
+
+  """"""
+  updateBlogArticleGrid(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: BlogArticleGrid_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): BlogArticleGrid
+
+  """"""
+  updateCategory(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Category_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Category
+
+  """"""
+  updateContactForm(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: ContactForm_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): ContactForm
+
+  """"""
+  updateFooter(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Footer_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Footer
+
+  """"""
+  updateFulltext(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Fulltext_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Fulltext
+
+  """"""
+  updateFullwidthBlogTeaser(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: FullwidthBlogTeaser_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): FullwidthBlogTeaser
+
+  """"""
+  updateHeadline(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Headline_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Headline
+
+  """"""
+  updateNavigation(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Navigation_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Navigation
+
+  """"""
+  updateNavigationEntry(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: NavigationEntry_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): NavigationEntry
+
+  """"""
+  updateNewsletterSignup(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: NewsletterSignup_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): NewsletterSignup
+
+  """"""
+  updatePage(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: Page_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): Page
+
+  """"""
+  updateSeoInformation(
+    """documentID"""
+    id: ID!
+
+    """"""
+    input: SeoInformation_UpdateInput!
+
+    """"""
+    locale: String
+
+    """Merge updated input (instead of replacing)"""
+    merge: Boolean = true
+  ): SeoInformation
+}
+
+""""""
+type Navigation {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  entries(locale: String): [Navigation_entries]
+
+  """"""
+  homePage(locale: String): Page
+
+  """"""
+  id: ID
+
+  """"""
+  notFoundPage(locale: String): Page
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type NavigationEntry {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  connection(locale: String): Page
+
+  """"""
+  id: ID
+
+  """"""
+  title: String
+}
+
+""""""
+type NavigationEntry_Connection {
+  """"""
+  edges: [NavigationEntry_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type NavigationEntry_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: NavigationEntry
+}
+
+""""""
+input NavigationEntry_CreateInput {
+  """"""
+  connection: ID
+
+  """"""
+  title: String
+}
+
+""""""
+input NavigationEntry_Sort {
+  """"""
+  connection: Order
+
+  """"""
+  title: Order
+}
+
+""""""
+input NavigationEntry_UpdateInput {
+  """"""
+  connection: ID
+
+  """"""
+  title: String
+}
+
+""""""
+input NavigationEntry_Where {
+  """"""
+  AND: [NavigationEntry_Where]
+
+  """"""
+  OR: [NavigationEntry_Where]
+
+  """"""
+  title: CaisyField_String_Where
+}
+
+""""""
+input Navigation_CreateInput {
+  """"""
+  entries: [ID]
+
+  """"""
+  homePage: ID
+
+  """"""
+  notFoundPage: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Navigation_UpdateInput {
+  """"""
+  entries: [ID]
+
+  """"""
+  homePage: ID
+
+  """"""
+  notFoundPage: ID
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+union Navigation_entries = NavigationEntry
+
+""""""
+type NewsletterSignup {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  headline: String
+
+  """"""
+  id: ID
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type NewsletterSignup_Connection {
+  """"""
+  edges: [NewsletterSignup_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type NewsletterSignup_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: NewsletterSignup
+}
+
+""""""
+input NewsletterSignup_CreateInput {
+  """"""
+  headline: String
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input NewsletterSignup_Sort {
+  """"""
+  headline: Order
+
+  """"""
+  subheadline: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input NewsletterSignup_UpdateInput {
+  """"""
+  headline: String
+
+  """"""
+  subheadline: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input NewsletterSignup_Where {
+  """"""
+  AND: [NewsletterSignup_Where]
+
+  """"""
+  OR: [NewsletterSignup_Where]
+
+  """"""
+  headline: CaisyField_String_Where
+
+  """"""
+  subheadline: CaisyField_String_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+""""""
+enum Order {
+  """"""
+  ASC
+
+  """"""
+  DESC
+}
+
+""""""
+type Page {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  components(locale: String): [Page_components]
+
+  """"""
+  id: ID
+
+  """"""
+  seo(locale: String): SeoInformation
+
+  """"""
+  slug: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type PageInfo {
+  """"""
+  endCursor: String
+
+  """"""
+  hasNextPage: Boolean
+
+  """"""
+  hasPreviousPage: Boolean
+
+  """"""
+  startCursor: String
+}
+
+""""""
+type Page_Connection {
+  """"""
+  edges: [Page_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type Page_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: Page
+}
+
+""""""
+input Page_CreateInput {
+  """"""
+  components: [ID]
+
+  """"""
+  seo: ID
+
+  """"""
+  slug: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Page_Sort {
+  """"""
+  components: Order
+
+  """"""
+  seo: Order
+
+  """"""
+  slug: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input Page_UpdateInput {
+  """"""
+  components: [ID]
+
+  """"""
+  seo: ID
+
+  """"""
+  slug: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input Page_Where {
+  """"""
+  AND: [Page_Where]
+
+  """"""
+  OR: [Page_Where]
+
+  """"""
+  slug: CaisyField_String_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
+
+""""""
+union Page_components = BlogArticleGrid | ContactForm | Fulltext | FullwidthBlogTeaser | Headline | NewsletterSignup
+
+""""""
+type Query {
+  """"""
+  Asset(id: ID!, locale: String): Asset
+
+  """"""
+  Author(id: ID!, locale: String): Author
+
+  """"""
+  BlogArticle(id: ID!, locale: String): BlogArticle
+
+  """"""
+  BlogArticleGrid(id: ID!, locale: String): BlogArticleGrid
+
+  """"""
+  Category(id: ID!, locale: String): Category
+
+  """"""
+  ContactForm(id: ID!, locale: String): ContactForm
+
+  """"""
+  Footer(locale: String): Footer
+
+  """"""
+  Fulltext(id: ID!, locale: String): Fulltext
+
+  """"""
+  FullwidthBlogTeaser(id: ID!, locale: String): FullwidthBlogTeaser
+
+  """"""
+  Headline(id: ID!, locale: String): Headline
+
+  """"""
+  Navigation(locale: String): Navigation
+
+  """"""
+  NavigationEntry(id: ID!, locale: String): NavigationEntry
+
+  """"""
+  NewsletterSignup(id: ID!, locale: String): NewsletterSignup
+
+  """"""
+  Page(id: ID!, locale: String): Page
+
+  """"""
+  SeoInformation(id: ID!, locale: String): SeoInformation
+
+  """"""
+  allAsset(after: String, before: String, first: Int, last: Int, locale: String, sort: [Asset_Sort], where: [Asset_Where]): Asset_Connection
+
+  """"""
+  allAuthor(after: String, before: String, first: Int, last: Int, locale: String, sort: [Author_Sort], where: [Author_Where]): Author_Connection
+
+  """"""
+  allBlogArticle(after: String, before: String, first: Int, last: Int, locale: String, sort: [BlogArticle_Sort], where: [BlogArticle_Where]): BlogArticle_Connection
+
+  """"""
+  allBlogArticleGrid(after: String, before: String, first: Int, last: Int, locale: String, sort: [BlogArticleGrid_Sort], where: [BlogArticleGrid_Where]): BlogArticleGrid_Connection
+
+  """"""
+  allCategory(after: String, before: String, first: Int, last: Int, locale: String, sort: [Category_Sort], where: [Category_Where]): Category_Connection
+
+  """"""
+  allContactForm(after: String, before: String, first: Int, last: Int, locale: String, sort: [ContactForm_Sort], where: [ContactForm_Where]): ContactForm_Connection
+
+  """"""
+  allFulltext(after: String, before: String, first: Int, last: Int, locale: String, sort: [Fulltext_Sort], where: [Fulltext_Where]): Fulltext_Connection
+
+  """"""
+  allFullwidthBlogTeaser(after: String, before: String, first: Int, last: Int, locale: String, sort: [FullwidthBlogTeaser_Sort], where: [FullwidthBlogTeaser_Where]): FullwidthBlogTeaser_Connection
+
+  """"""
+  allHeadline(after: String, before: String, first: Int, last: Int, locale: String, sort: [Headline_Sort], where: [Headline_Where]): Headline_Connection
+
+  """"""
+  allNavigationEntry(after: String, before: String, first: Int, last: Int, locale: String, sort: [NavigationEntry_Sort], where: [NavigationEntry_Where]): NavigationEntry_Connection
+
+  """"""
+  allNewsletterSignup(after: String, before: String, first: Int, last: Int, locale: String, sort: [NewsletterSignup_Sort], where: [NewsletterSignup_Where]): NewsletterSignup_Connection
+
+  """"""
+  allPage(after: String, before: String, first: Int, last: Int, locale: String, sort: [Page_Sort], where: [Page_Where]): Page_Connection
+
+  """"""
+  allSeoInformation(after: String, before: String, first: Int, last: Int, locale: String, sort: [SeoInformation_Sort], where: [SeoInformation_Where]): SeoInformation_Connection
+}
+
+""""""
+type SeoInformation {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  description: String
+
+  """"""
+  id: ID
+
+  """"""
+  keywords: String
+
+  """"""
+  ogImage(locale: String): Asset
+
+  """"""
+  title: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+type SeoInformation_Connection {
+  """"""
+  edges: [SeoInformation_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type SeoInformation_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: SeoInformation
+}
+
+""""""
+input SeoInformation_CreateInput {
+  """"""
+  description: String
+
+  """"""
+  keywords: String
+
+  """"""
+  ogImage: ID
+
+  """"""
+  title: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input SeoInformation_Sort {
+  """"""
+  description: Order
+
+  """"""
+  keywords: Order
+
+  """"""
+  ogImage: Order
+
+  """"""
+  title: Order
+
+  """"""
+  titleInternal: Order
+}
+
+""""""
+input SeoInformation_UpdateInput {
+  """"""
+  description: String
+
+  """"""
+  keywords: String
+
+  """"""
+  ogImage: ID
+
+  """"""
+  title: String
+
+  """"""
+  titleInternal: String
+}
+
+""""""
+input SeoInformation_Where {
+  """"""
+  AND: [SeoInformation_Where]
+
+  """"""
+  OR: [SeoInformation_Where]
+
+  """"""
+  description: CaisyField_String_Where
+
+  """"""
+  keywords: CaisyField_String_Where
+
+  """"""
+  title: CaisyField_String_Where
+
+  """"""
+  titleInternal: CaisyField_String_Where
+}
