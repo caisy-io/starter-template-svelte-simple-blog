@@ -1,8 +1,9 @@
 import { q_Footer } from '$lib/graphql/queries/Footer';
 import { q_Navigation } from '$lib/graphql/queries/Navigation';
+import type { Load } from '@sveltejs/kit';
 import { GraphQLClient } from 'graphql-request';
 
-export const load = async (props) => {
+export const load: Load = async (props) => {
 	const endpoint = await `https://cloud.caisy.io/api/v3/e/${
 		import.meta.env.VITE_CAISY_PROJECT_ID
 	}/graphql`;
