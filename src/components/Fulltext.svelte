@@ -9,7 +9,7 @@
 <div class="m-10 flex items-center justify-center">
 	<div class="max-w-prose">
 		<article class="prose lg:prose-xl">
-			<RichTextRenderer connections={text?.connections} node={text?.json} />
+			<RichTextRenderer connections={text?.connections} node={text?.json} overwrites />
 		</article>
 	</div>
 </div>

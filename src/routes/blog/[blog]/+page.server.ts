@@ -5,7 +5,6 @@ import type { IGenQuery } from '../../../services/graphql/__generated/sdk';
 /** @type {import('./$types').PageServerLoad} */
 
 export const load = async ({ params }) => {
-	console.log('props', params);
 	try {
 		const slugObj = {
 			slug: params.blog

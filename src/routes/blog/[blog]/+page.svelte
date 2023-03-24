@@ -9,11 +9,11 @@
 		<article class="prose lg:prose-xl">
 			{#if text?.teaserImage?.src}
 				<div class="flex items-center justify-center overflow-hidden flex-wrap mt-6 mb-6 not-prose">
-					<img src={text.teaserImage.src} />
+					<img src={text.teaserImage.src} alt={text.teaserImage.description} />
 				</div>
 			{/if}
 			{#if text.text?.json}
-				<RichTextRenderer connections={text.text?.connections} node={text.text?.json} />
+				<RichTextRenderer connections={text.text?.connections} node={text.text?.json} overwrites />
 			{/if}
 		</article>
 	</div>
