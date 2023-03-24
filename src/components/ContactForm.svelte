@@ -5,7 +5,7 @@
 	const { headline } = data;
 </script>
 
-<div class="m-10 flex items-center justify-center">
+<div class="px-6 lg:m-10 lg:flex lg:items-center lg:justify-center ">
 	<div class="max-w-prose">
 		<form action="#">
 			<div

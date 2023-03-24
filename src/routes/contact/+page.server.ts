@@ -17,9 +17,7 @@ export const load: Load = async ({ params }) => {
 			}
 		});
 
-		const pageData = (await graphQLClient.request(q_allPageBySlug, slugObj)) as {
-			allPage: any;
-		};
+		const pageData = (await graphQLClient.request(q_allPageBySlug, slugObj)) as any;
 
 		return { pageData: pageData?.allPage?.edges[0]?.node?.components || null, params };
 	} catch (err) {
