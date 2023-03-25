@@ -1,4 +1,4 @@
-import { q_allPageBySlug } from '$lib/graphql/queries/allPageBySlug';
+import { q_allPageBySlug } from '../../services/graphql/queries/allPageBySlug';
 import { GraphQLClient } from 'graphql-request';
 
 export const load = async ({ params }) => {
@@ -16,7 +16,7 @@ export const load = async ({ params }) => {
 			}
 		});
 
-		const pageData = await graphQLClient.request(q_allPageBySlug, slugObj);
+		const pageData = (await graphQLClient.request(q_allPageBySlug, slugObj)) as any;
 
 		return { pageData: pageData?.allPage?.edges[0]?.node?.components || null, params };
 	} catch (err) {

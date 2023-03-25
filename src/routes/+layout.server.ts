@@ -1,5 +1,5 @@
-import { q_Footer } from '$lib/graphql/queries/Footer';
-import { q_Navigation } from '$lib/graphql/queries/Navigation';
+import { q_Footer } from '../services/graphql/queries/Footer';
+import { q_Navigation } from '../services/graphql/queries/Navigation';
 import type { Load } from '@sveltejs/kit';
 import { GraphQLClient } from 'graphql-request';
 

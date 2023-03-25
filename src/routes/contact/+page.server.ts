@@ -1,4 +1,4 @@
-import { q_allPageBySlug } from '$lib/graphql/queries/allPageBySlug';
+import { q_allPageBySlug } from '../../services/graphql/queries/allPageBySlug';
 import type { Load } from '@sveltejs/kit';
 import { GraphQLClient } from 'graphql-request';
 

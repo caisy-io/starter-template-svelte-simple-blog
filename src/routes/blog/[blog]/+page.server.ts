@@ -1,4 +1,4 @@
-import { q_allBlogArticleBySlug } from '$lib/graphql/queries/allBlogArticleBySlug';
+import { q_allBlogArticleBySlug } from '../../../services/graphql/queries/allBlogArticleBySlug';
 import { GraphQLClient } from 'graphql-request';
 import type { IGenQuery } from '../../../services/graphql/__generated/sdk';
 

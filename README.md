@@ -59,12 +59,10 @@ In order to have the right blueprints configured, make sure to follow the onboar
 To run this project a `.env` file like this (with your own projects values) is required:
 
 ```
- CAISY_PROJECT_ID=$$$$$$$$$$$$$$$$$$
- CAISY_API_KEY=XXXXXXXXX
 
 
- VITE_CAISY_PROJECT_ID= *same as CAISY_PROJECT_ID
- VITE_CAISY_API_KEY= *same as  CAISY_API_KEY*
+ VITE_CAISY_PROJECT_ID= XXXXXX
+ VITE_CAISY_API_KEY= ************
 
 ```
 
