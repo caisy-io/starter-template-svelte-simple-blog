@@ -81,8 +81,8 @@ In order to have the right blueprints configured, make sure to follow the onboar
 - tailwindcss for styling
 - @caisy/rich-text-svelte-renderer to render the caisy richtexts in svelte
 - graphql and graphql-request to fetch data from caisy
-- codegen to genereate code types
-- vite to run localhost
+- codegen to genereate typescript types
+
 
 #### Codegen
 
