@@ -2,8 +2,7 @@
 	import type { IGenBlogArticle } from '../services/graphql/__generated/sdk';
 
 	export let article: IGenBlogArticle;
-	const props = article;
-	const { teaserHeadline, teaserDesciption, teaserImage } = props;
+	const { teaserHeadline, teaserDesciption, teaserImage } = article;
 </script>
 
 <div class="flex flex-col justify-start items-start flex-grow relative overflow-hidden gap-7">
@@ -25,7 +24,7 @@
 		<p class="text-base text-left text-gray-600">
 			{teaserDesciption}
 		</p>
-		<a href={`/blog/${props.slug}`} title={teaserHeadline} class="pointer">
+		<a href={`/blog/${article.slug}`} title={teaserHeadline} class="pointer">
 			<div class="flex justify-start items-start">
 				<div
 					class="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white"
