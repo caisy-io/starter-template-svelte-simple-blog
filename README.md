@@ -25,17 +25,6 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 # Starter template svelte simple blog with caisy
 
@@ -44,7 +33,7 @@ You can preview the production build with `npm run preview`.
 Deploy this template to Vercel
 <br>
 <br>
-![Deploy to Vercel]
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcaisy-io%2Fstarter-template-svelte-simple-blog&env=CAISY_PROJECT_ID,CAISY_API_KEY&project-name=caisy-template-svelte-simple-blog&repository-name=caisy-template-svelte-simple-blog&demo-title=Simple%20blog%20with%20svelte%20and%20caisy&demo-url=https%3A%2F%2Fcaisy-svelte-simple-blog.vercel.app)
 
 ### Features
 
@@ -78,7 +67,7 @@ In order to have the right blueprints configured, make sure to follow the onboar
 - tailwindcss for styling
 - @caisy/rich-text-svelte-renderer to render the caisy richtexts in svelte
 - graphql and graphql-request to fetch data from caisy
-- codegen to genereate typescript types
+- codegen to genereate typescript types and the sdk form the queries
 
 
 #### Codegen
@@ -102,4 +91,14 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [the caisy documentation](https://caisy.io/developer/docs)
-Feel free to check [the astro documentation](https://svelte.dev/docs)
+Feel free to check [the sveltekit documentation](https://kit.svelte.dev/)
+Feel free to check [the svelte documentation](https://svelte.dev/docs)
+## Building
+To create a production build:
+
+```bash
+npm run build
+```
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment. Right now we have the vercel adapter set up. 
