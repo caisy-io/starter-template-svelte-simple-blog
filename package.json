@@ -43,7 +43,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@caisy/rich-text-svelte-renderer": "^0.1.20",
+		"@caisy/rich-text-svelte-renderer": "^0.1.22",
 		"@fontsource/inter": "^4.5.15",
 		"graphql": "^16.6.0",
 		"graphql-request": "^6.0.0"
