@@ -14,13 +14,13 @@
 	<div class="max-w-screen-2xl">
 		{#if featuredArticle}
 			<div
-				class="flex flex-col md:flex-row justify-start items-center self-stretch  relative overflow-hidden gap-[34px] py-[60px]"
+				class="flex flex-col md:flex-row justify-start items-center self-stretch relative overflow-hidden gap-[34px] py-[60px]"
 			>
 				<div
 					class="flex flex-base-1 flex-col w-full md:w-1/2 justify-start items-start flex-grow relative overflow-hidden gap-2.5"
 				>
 					{#if featuredArticle?.category?.name}
-						<div class="flex justify-start items-start ">
+						<div class="flex justify-start items-start">
 							<div
 								class="flex justify-center items-center relative overflow-hidden gap-2 px-3 py-1.5 rounded-md bg-gray-100"
 							>
@@ -43,6 +43,8 @@
 									>
 										<div class="w-12 h-12 relative overflow-hidden rounded-full">
 											<img
+												width="46"
+												height="46"
 												src={`${author.avatar?.src}?w=46&h=46`}
 												alt={author.avatar?.description ?? ''}
 												class="object-cover"
@@ -63,7 +65,7 @@
 					{/if}
 
 					<a href={`/blog/${featuredArticle?.slug}`} class="pointer">
-						<div class="flex justify-start items-start ">
+						<div class="flex justify-start items-start">
 							<div
 								class="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white"
 							>
