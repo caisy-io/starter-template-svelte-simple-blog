@@ -1,9 +1,5 @@
 # Starter template svelte simple blog with caisy
-
-## svelte x Caisy
-
 Deploy this template to Vercel
-<br>
 <br>
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcaisy-io%2Fstarter-template-svelte-simple-blog&env=CAISY_PROJECT_ID,CAISY_API_KEY&project-name=caisy-template-svelte-simple-blog&repository-name=caisy-template-svelte-simple-blog&demo-title=Simple%20blog%20with%20svelte%20and%20caisy&demo-url=https%3A%2F%2Fcaisy-svelte-simple-blog.vercel.app)
 
