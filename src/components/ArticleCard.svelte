@@ -11,8 +11,8 @@
 		<div class="self-stretch h-[300px] md:h-[220px] relative overflow-hidden rounded-lg">
 			<img
 				loading="lazy"
-				src={`${teaserImage.src}?w=1024`}
-				srcset={`${teaserImage.src}?w=1024 1920w, ${teaserImage.src}?w=1024 1280w, ${teaserImage.src}?w=480 640w, ${teaserImage.src}?w=480 320w`}
+				src={`${teaserImage.src}?w=512`}
+				srcset={`${teaserImage.src}?w=512 1920w, ${teaserImage.src}?w=512 1280w, ${teaserImage.src}?w=512 640w, ${teaserImage.src}?w=512 320w`}
 				alt={teaserImage.description ?? ''}
 				class="object-cover w-full h-full"
 			/>

@@ -93,9 +93,9 @@
 						style={`background-color: ${imageDominantColor}`}
 						loading="eager"
 						src={`${imageSrc}?w=960&h=960`}
-						srcset={`${imageSrc}?w=1920&h=1920 1920w, ${imageSrc}?w=960&h=960 1280w, ${imageSrc}?w=640&h=640 640w, ${imageSrc}?w=320&h=320 320w`}
+						srcset={`${imageSrc}?w=960&h=960 1920w, ${imageSrc}?w=640&h=640 1280w, ${imageSrc}?w=640&h=640 640w, ${imageSrc}?w=480&h=480 480w, ${imageSrc}?w=320&h=320 320w`}
 						alt={imageDescription ?? ''}
-						class="object-cover"
+						class="object-cover w-full"
 					/>
 				</div>
 			</div>
