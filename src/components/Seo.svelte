@@ -9,7 +9,7 @@
 <svelte:head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
 	<title>{seo?.title ?? ''}</title>
@@ -37,6 +37,6 @@
 	{#if ogImageAlt}
 		<meta property="og:image:alt" content={ogImageAlt} />
 	{/if}
-    
+
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
