@@ -10,7 +10,7 @@
 	<div class="max-w-prose">
 		<div class="mb-8 flex flex-col justify-start items-center gap-2.5">
 			{#if headline}
-				<h1 class="text-4xl font-bold text-left text-slate-900">
+				<h1 class="text-4xl font-bold text-slate-900 text-center">
 					{headline}
 				</h1>
 			{/if}

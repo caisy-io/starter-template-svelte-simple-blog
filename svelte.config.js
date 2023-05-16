@@ -1,12 +1,11 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import('@sveltejs/adapter-vercel').Config} */
 const config = {
+	runtime: 'edge',
 	kit: {
-		adapter: adapter({
-			runtime: 'nodejs18.x'
-		})
+		adapter: adapter()
 	},
 	preprocess: vitePreprocess()
 };

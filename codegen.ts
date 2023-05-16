@@ -5,7 +5,7 @@ export const config: CodegenConfig = {
 	ignoreNoDocuments: true,
 	schema: [
 		{
-			[`https://cloud.caisy.io/api/v3/e/${process.env.VITE_CAISY_PROJECT_ID}/graphql` || '']: {
+			[`https://cloud.caisy.io/api/v3/e/${process.env.CAISY_PROJECT_ID}/graphql` || '']: {
 				headers: {
 					'x-caisy-apikey': `${process.env.CAISY_API_KEY}`
 				}

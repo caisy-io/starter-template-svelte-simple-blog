@@ -58,12 +58,9 @@ Deploy this template to Vercel
 In order to have the right blueprints configured, make sure to follow the onboarind on [caisy.io](https://caisy.io/) and select the starter template _"svelte Simple Blog"_
 To run this project a `.env` file like this (with your own projects values) is required:
 
-```
-
-
- VITE_CAISY_PROJECT_ID= XXXXXX
- VITE_CAISY_API_KEY= ************
-
+```bash
+ CAISY_PROJECT_ID=XXXXXX
+ CAISY_API_KEY=************
 ```
 
 ### To run this project locally
@@ -97,7 +94,7 @@ All commands are run from the root of the project, from a terminal:
 | Command             | Action                                                   |
 | :------------------ | :------------------------------------------------------- |
 | `npm install`       | Installs dependencies                                    |
-| `npm run dev`       | Starts local dev server at `http://127.0.0.1:5173/`      |
+| `npm run dev`       | Starts local dev server at `http://127.0.0.1:3000/`      |
 | `npm run gen`       | Regenerates generated types and SDK                      |
 | `npm run gen:watch` | Wachting changes and regenerates generated types and SDK |
 | `npm run build`     | Build your production site to `.svelte-kit`              |

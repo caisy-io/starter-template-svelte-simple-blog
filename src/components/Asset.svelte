@@ -13,7 +13,7 @@
 			class="rounded-lg "
 		/>
 		{#if description}
-			<label class="text-gray-400 mt-3 text-center block text-xs">{description}</label>
+			<caption class="text-gray-400 mt-3 text-center block text-xs">{description}</caption>
 		{/if}
 	</div>
 {/if}

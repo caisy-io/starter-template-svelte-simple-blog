@@ -1,7 +1,8 @@
 <script lang="ts">
-	import PageBody from '../components/PageBody.svelte';
-	import Seo from '../components/Seo.svelte';
-	import type { ILoadProps } from '../services/content/load';
+	import PageBody from '../../components/PageBody.svelte';
+	import Seo from '../../components/Seo.svelte';
+	import type { ILoadProps } from '../../services/content/load';
+
 	export let data: ILoadProps;
 </script>
 

@@ -2,23 +2,23 @@ import { GraphQLClient } from 'graphql-request';
 import { print } from 'graphql';
 import { getSdk as getSdkWithClient } from './__generated/sdk';
 import type { Requester } from './__generated/sdk';
+import { env } from '$env/dynamic/private'
 
 const requester: Requester<any> = async (doc: any, vars: any) => {
-	const VITE_CAISY_PROJECT_ID = import.meta.env.VITE_CAISY_PROJECT_ID;
-	const VITE_CAISY_API_KEY = import.meta.env.VITE_CAISY_API_KEY;
-	const NODE_ENV = import.meta.env.NODE_ENV;
-	if (!VITE_CAISY_PROJECT_ID || VITE_CAISY_PROJECT_ID == '') {
-		throw new Error('VITE_CAISY_PROJECT_ID is not defined - please add it to the env file');
+	const CAISY_PROJECT_ID = env.CAISY_PROJECT_ID;
+	const CAISY_API_KEY = env.CAISY_API_KEY;
+	if (!CAISY_PROJECT_ID || CAISY_PROJECT_ID == '') {
+		throw new Error('CAISY_PROJECT_ID is not defined - please add it to the env file');
 	}
-	if (!VITE_CAISY_API_KEY || VITE_CAISY_API_KEY == '') {
-		throw new Error('VITE_CAISY_API_KEY is not defined - please add it to the env file');
+	if (!CAISY_API_KEY || CAISY_API_KEY == '') {
+		throw new Error('CAISY_API_KEY is not defined - please add it to the env file');
 	}
 
 	const client = new GraphQLClient(
-		`https://cloud.caisy.io/api/v3/e/${VITE_CAISY_PROJECT_ID}/graphql`,
+		`https://cloud.caisy.io/api/v3/e/${CAISY_PROJECT_ID}/graphql`,
 		{
 			headers: {
-				'x-caisy-apikey': `${VITE_CAISY_API_KEY}`
+				'x-caisy-apikey': `${CAISY_API_KEY}`
 			}
 		}
 	);
@@ -27,7 +27,7 @@ const requester: Requester<any> = async (doc: any, vars: any) => {
 		const res = await client.rawRequest(print(doc), vars);
 		return res?.data as any;
 	} catch (err: any) {
-		if (NODE_ENV == 'development') {
+		if (import.meta.env.DEV) {
 			console.error(
 				'Error in GraphQL request:',
 				'\n' + print(doc) + '\n',

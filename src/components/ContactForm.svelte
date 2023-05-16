@@ -5,7 +5,7 @@
 	const { headline } = data;
 </script>
 
-<div class="px-6 lg:m-10 lg:flex lg:items-center lg:justify-center ">
+<div class="px-6 lg:m-10 lg:flex lg:items-center lg:justify-center">
 	<div class="max-w-prose">
 		<form action="#">
 			<div
@@ -19,7 +19,10 @@
 				<div class="flex flex-col justify-start items-start self-stretch">
 					<div class="flex flex-col justify-start items-start self-stretch flex-grow gap-2.5">
 						<div class="flex justify-start items-start self-stretch relative">
-							<label class="flex-grow w-96 text-sm font-semibold text-left text-gray-800">
+							<label
+								for="contact_name"
+								class="flex-grow w-96 text-sm font-semibold text-left text-gray-800"
+							>
 								Name
 							</label>
 						</div>
@@ -27,6 +30,7 @@
 							class="flex justify-start items-center self-stretch flex-grow overflow-hidden rounded-md bg-white border border-gray-200"
 						>
 							<input
+								id="contact_name"
 								type="text"
 								class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500"
 							/>
@@ -36,7 +40,10 @@
 				<div class="flex flex-col justify-start items-start self-stretch">
 					<div class="flex flex-col justify-start items-start self-stretch flex-grow gap-2.5">
 						<div class="flex justify-start items-start self-stretch relative">
-							<label class="flex-grow w-96 text-sm font-semibold text-left text-gray-800">
+							<label
+								for="contact_email"
+								class="flex-grow w-96 text-sm font-semibold text-left text-gray-800"
+							>
 								Email
 							</label>
 						</div>
@@ -44,6 +51,7 @@
 							class="flex justify-start items-center self-stretch flex-grow overflow-hidden rounded-md bg-white border border-gray-200"
 						>
 							<input
+								id="contact_email"
 								type="email"
 								class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500"
 							/>
@@ -53,14 +61,18 @@
 				<div class="flex flex-col justify-start items-start self-stretch">
 					<div class="flex flex-col justify-start items-start self-stretch flex-grow gap-2.5">
 						<div class="flex justify-start items-start self-stretch relative">
-							<label class="flex-grow w-96 text-sm font-semibold text-left text-gray-800">
-								Mesage
+							<label
+								for="contact_message"
+								class="flex-grow w-96 text-sm font-semibold text-left text-gray-800"
+							>
+								Message
 							</label>
 						</div>
 						<div
 							class="flex justify-start items-center self-stretch flex-grow overflow-hidden rounded-md bg-white border border-gray-200"
 						>
 							<textarea
+								id="contact_message"
 								class="py-3 px-4 block w-full resize-none border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500"
 								rows="6"
 							/>

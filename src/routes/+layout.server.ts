@@ -1,25 +1,26 @@
-import { q_Footer } from '../services/graphql/queries/Footer';
-import { q_Navigation } from '../services/graphql/queries/Navigation';
+import { caisySDK } from '../services/graphql/getSdk';
 import type { Load } from '@sveltejs/kit';
-import { GraphQLClient } from 'graphql-request';
 
-export const load: Load = async (props) => {
-	const endpoint = await `https://cloud.caisy.io/api/v3/e/${
-		import.meta.env.VITE_CAISY_PROJECT_ID
-	}/graphql`;
+export const load: Load = async () => {
+	const navigationRequest = caisySDK.Navigation();
+	const footerRequest = caisySDK.Footer();
+	const navigation = (await navigationRequest)?.Navigation;
 
-	const graphQLClient = await new GraphQLClient(endpoint, {
-		headers: {
-			'x-caisy-apikey': `${import.meta.env.VITE_CAISY_API_KEY}`
-		}
-	});
-
-	const navigationData = await graphQLClient.request(q_Navigation);
-	const footerData = await graphQLClient.request(q_Footer);
+	const notFoundPage = navigation?.notFoundPage?.slug
+    ? (await caisySDK
+        .allPageBySlug({ slug: navigation?.notFoundPage?.slug})
+        .then((r) => r.allPage?.edges?.[0]?.node)) ?? null
+    : null;
 
 	return {
-		navigationData: navigationData || null,
-		footerData: footerData || null,
-		slug: props.route.id
+		notFoundPage,
+		navigation,
+		footer: (await footerRequest)?.Footer,
 	};
+};
+
+export const config = {
+	isr: {
+		expiration: 1
+	}
 };

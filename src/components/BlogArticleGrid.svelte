@@ -15,7 +15,6 @@
 				<h1 class="text-4xl font-bold text-left text-slate-900">
 					{headline ?? ''}
 				</h1>
-
 				{#if subheadline}
 					<h3 class="text-base text-left text-gray-600">{subheadline}</h3>
 				{/if}

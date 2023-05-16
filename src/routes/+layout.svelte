@@ -1,21 +1,25 @@
 <script lang="ts">
-	import type { PageInfoCustomType } from '../lib/graphql/__generated/customTypes';
 	import Header from '../components/Header.svelte';
 	import '../app.css';
 	import Footer from '../components/Footer.svelte';
+	import Toast from '../components/Toast.svelte';
 	import '@fontsource/inter';
+	import type { IGenFooter, IGenNavigation } from '../services/graphql/__generated/sdk';
+	import { env } from '$env/dynamic/public';
 
-	export let data: PageInfoCustomType;
-
-	const { navigationData, footerData } = data;
+	export let data: { navigation: IGenNavigation; footer: IGenFooter };
+	const { navigation, footer } = data;
 </script>
 
 <main>
-	{#if navigationData && navigationData?.Navigation}
-		<Header navigation={navigationData?.Navigation} />
+	{#if env.PUBLIC_SHOW_ONBOARDING_TOAST != 'false'}
+		<Toast />
+	{/if}
+	{#if navigation}
+		<Header {navigation} />
 	{/if}
 	<slot />
-	{#if footerData && footerData?.Footer}
-		<Footer footer={footerData?.Footer} />
+	{#if footer}
+		<Footer {footer} />
 	{/if}
 </main>

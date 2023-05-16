@@ -7,5 +7,5 @@
 </script>
 
 {#if content?.json}
-	<RichTextRenderer node={content.json} overwrites />
+	<RichTextRenderer node={content.json} />
 {/if}
