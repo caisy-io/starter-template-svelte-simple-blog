@@ -15,7 +15,7 @@ const requester: Requester<any> = async (doc: any, vars: any) => {
 	}
 
 	const client = new GraphQLClient(
-		`https://cloud.caisy.io/api/v3/e/${CAISY_PROJECT_ID}/graphql`,
+		`https://cloud.caisy.io/api/e/v4/${CAISY_PROJECT_ID}/graphql`,
 		{
 			headers: {
 				'x-caisy-apikey': `${CAISY_API_KEY}`
